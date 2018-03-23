@@ -4,7 +4,6 @@
 (function() {
   'use strict';
   const pathToParamsFile = '../../trainingdata/metamind-demo-story/params/MetatavuBotIntentsParams.txt';
-  const openNLPScripts = __dirname + '/../open-nlp-scripts/start.sh';
   const fs = require('fs');
   const cmd = require('node-cmd');
   const Promise = require('bluebird');
