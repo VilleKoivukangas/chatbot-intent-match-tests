@@ -3,6 +3,8 @@ Create messages, edit them, send them to chatbot and check if bot recognized the
 
 ## Usage
 
+This is made for [Metamind](https://github.com/Metatavu/metamind-api) but can be possibly used in other bots as well.
+
 1. Run `npm install`
 2. Make sure `config.js` is ok
 3. Run `node app`
