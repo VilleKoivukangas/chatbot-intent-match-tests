@@ -1,0 +1,10 @@
+{
+  "base-url": "http://dev-metamind.com:8080",
+  "metamind-story": "metatavu-bot",
+  "locale": "fi",
+  "timezone": "Europe/Helsinki",
+  "visitor": "Unknown",
+  "expected-bot-response": "Toimii",
+  "result-folder": "./results/WhiteSpaceTokenizer/"
+}
+

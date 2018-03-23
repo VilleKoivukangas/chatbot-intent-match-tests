@@ -1,0 +1,22 @@
+{
+  "name": "chatbot-intent-test",
+  "version": "1.0.0",
+  "description": "Test chatbot intents",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ville Koivukangas",
+  "license": "ISC",
+  "devDependencies": {
+    "unirest": "^0.5.1"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "bluebird": "^3.5.1",
+    "fs": "0.0.1-security",
+    "nconf": "^0.10.0",
+    "node-cmd": "https://github.com/VilleKoivukangas/node-cmd",
+    "read-multiple-files": "^2.0.0"
+  }
+}

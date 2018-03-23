@@ -1,0 +1,53 @@
+
+{
+    "intents": {
+        "longIntents": [
+            {"msg": "Venäjän presidentin Vladimir Putinin mukaan tekoälyn kehittelyn voittajasta tulee maailman valtias."},
+            {"msg": "Uhkakuvaksi on nostettu, että tekoäly nopeuttaa teknologista ja sosiaalista muutosta niin paljon, etteivät ihmiset ehdi sopeutua siihen."},
+            {"msg": "Tekoälytiede voidaan karkeasti jakaa perinteiseen symbolipainotteiseen tekoälytieteeseen sekä uudempaan, hahmopohjaiseen, laskennallisen älykkyyden suuntaukseen."},
+            {"msg": "Tekoälytieteen pioneeri Alan Turing määritteli käytännönläheisen kokeen, jolla voi mitata tietokoneen ihmismäisyyttä."},
+            {"msg": "Tekoälytiede voidaan karkeasti jakaa perinteiseen symbolipainotteiseen tekoälytieteeseen sekä uudempaan, hahmopohjaiseen, laskennallisen älykkyyden suuntaukseen."},
+            {"msg": "Mielikuvitukseni juuri loppui! En keksi mitään kivoja lauseita enään. Olen vain turha täytelause, mutta ajan silti asiani."},
+            {"msg": "Tämä ohjelma testaa sitä, että tuleeko intent match, kun annettua viestiä muutetaan eri tavoilla. Helppoa, eikö?"},
+            {"msg": "Tämä ohjelma generoi yli tuhat eri viestiä. Näiden testaamiseen käsin menisi koko päivä! En keksi muuta sanottavaa."},
+            {"msg": "Olen vain esimerkki lause, joka lähetetään eri tavoilla muokattuna chatbotille. Sen jälkeen katsotaan, että tuliko match."},
+            {"msg": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
+        ],
+        "mediumIntents": [
+            {"msg": "Tekoäly viittaa myös aihetta tutkivaan tieteen alaan."},
+            {"msg": "Viidessä vuodessa on tapahtunut huima kehitys."},
+            {"msg": "Tekoälyn kehitys voi johtaa kolmanteen maailmansotaan."},
+            {"msg": "Luonnollisen kielen käsittely on kivaa."},
+            {"msg": "Chatbotit ovat hyvin tyhmiä kapistuksia."},
+            {"msg": "Tämä on keskipitkä lause, joka lähetetään botille."},
+            {"msg": "tiedän sanoja kuten omena, pullo, kani ja silmä."},
+            {"msg": "Tänään on hyvä päivä. Toivottavasti myös huomenna."},
+            {"msg": "Turhia lauseita on hyvin vaikeaa koittaa keksiä."},
+            {"msg": "Huh! Tämä on onneksi viimeinen keskipitkä viesti."}
+        ],
+        "shortIntents": [
+            {"msg": "Kesken kaiken."},
+            {"msg": "Kaikki mukaan!"},
+            {"msg": "Lähdetään koodaamaan."},
+            {"msg": "Heippa maailma!"},
+            {"msg": "Moikka Mikkeli!"},
+            {"msg": "Tänään miekaillaan!"},
+            {"msg": "Mikä meininki?"},
+            {"msg": "Lyhyt viesti."},
+            {"msg": "Terveppä terve!"},
+            {"msg": "Olen tietokoneohjelma."}
+        ],
+        "oneWordIntents": [
+            {"msg": "Olut."},
+            {"msg": "Viski."},
+            {"msg": "Viini."},
+            {"msg": "Bataatti."},
+            {"msg": "Tomaatti."},
+            {"msg": "Kello."},
+            {"msg": "Kavio."},
+            {"msg": "Pallo."},
+            {"msg": "Tietokone."},
+            {"msg": "Kahvimuki."}
+        ]
+    }
+}
