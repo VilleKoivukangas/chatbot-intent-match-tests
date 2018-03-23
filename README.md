@@ -1,7 +1,7 @@
 # chatbot-intent-match-tests
 Create messages, edit them, send them to chatbot and check if bot recognized the message.
 
-##Usage
+## Usage
 
 1. Run `npm install`
 2. Make sure `config.js` is ok
