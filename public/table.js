@@ -45,6 +45,7 @@ $(document).ready(() => {
         if (index == 0) {
           $('.white-token').append(`
             <div class="card" style="width: 45%;float:left;margin:2%;">
+              <h4>Best setting</h4>
               <h5 class="card-header bg-primary">${match.intentType}</h5>
               <div class="card-body">
                 <h5 class="card-title">${match.fileName}</h5>
@@ -53,12 +54,47 @@ $(document).ready(() => {
             </div>
           
           `);
+        } else if(index == 1) {
+          $('.white-token').append(`
+            <div class="card" style="width: 45%;float:left;margin:2%;">
+              <h4>Second best setting</h4>
+              <h5 class="card-header bg-primary">${match.intentType}</h5>
+              <div class="card-body">
+                <h5 class="card-title">${match.fileName}</h5>
+                <p class="card-text">Total amount of matches: <span style="color: red">${match.total}<span></p>
+              </div>
+            </div>
+          
+          `);
+        }else if(index == 2) {
+          $('.white-token').append(`
+            <div class="card" style="width: 45%;float:left;margin:2%;">
+              <h4>Third best setting</h4>
+              <h5 class="card-header bg-primary">${match.intentType}</h5>
+              <div class="card-body">
+                <h5 class="card-title">${match.fileName}</h5>
+                <p class="card-text">Total amount of matches: <span style="color: red">${match.total}<span></p>
+              </div>
+            </div>
+          
+          `);
+        }else if(index == 3) {
+          $('.white-token').append(`
+            <div class="card" style="width: 45%;float:left;margin:2%;">
+              <h4>Fourth best setting</h4>
+              <h5 class="card-header bg-primary">${match.intentType}</h5>
+              <div class="card-body">
+                <h5 class="card-title">${match.fileName}</h5>
+                <p class="card-text">Total amount of matches: <span style="color: red">${match.total}<span></p>
+              </div>
+            </div>
+          `);
         }
       });
     });
   });
   
-  $.get( "http://localhost:1337/results/simple", function( data ) {
+  /*$.get( "http://localhost:1337/results/simple", function( data ) {
     
     const messagesByFileName = data.map((response) => {
       const path = response.path.split('/');
@@ -115,7 +151,7 @@ $(document).ready(() => {
         }
       });
     });
-  });
+  });*/
   
   function getTotalMatches(messageResultsByFileName) {
     return messageResultsByFileName.reduce((total, msg, index, array) => {

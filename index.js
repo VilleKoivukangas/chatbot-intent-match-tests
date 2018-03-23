@@ -28,23 +28,6 @@
     });
   });
   
-  app.get('/results/simple', (req, res) => {
-    fs.readdir('./results/simpleTokenizer', function(err, filenames) {
-      const filePaths = filenames.map((filename) => {
-        return './results/simpleTokenizer/' + filename;
-      }); 
-      let arr= [];
-      readMultipleFiles(filePaths, 'utf8').subscribe({
-        next(result) {
-          arr.push(result);
-        },
-        complete() {
-          res.json(arr);
-        }
-      });
-    });
-  });
-  
   app.get('/', (req, res) => {
     res.sendFile('index.html');
   });

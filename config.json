@@ -5,6 +5,12 @@
   "timezone": "Europe/Helsinki",
   "visitor": "Unknown",
   "expected-bot-response": "Toimii",
-  "result-folder": "./results/WhiteSpaceTokenizer/"
+  "result-folder": "./results/WhiteSpaceTokenizer/",
+  "path-to-opennlp-bin": "../../apache-opennlp-1.8.4/bin/",
+  "path-to-opennlp-params": "../../trainingdata/metamind-demo-story/params/MetatavuBotIntentsParams.txt",
+  "path-to-trainingdata-txt": "../../trainingdata/metamind-demo-story/intents/MetatavuBotIntents.txt",
+  "path-to-trainingdata-bin": "../../trainingdata/metamind-demo-story/intents/bin/fi-metatavu-bot.bin",
+  "path-to-back-to-project": "../../git/chatbot-intent-test",
+  "chatbot-reload-url": "http://dev-metamind.com:8080/v1/system/reload"
 }
 

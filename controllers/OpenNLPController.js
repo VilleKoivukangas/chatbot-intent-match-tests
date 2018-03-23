@@ -3,11 +3,12 @@
 
 (function() {
   'use strict';
-  const pathToParamsFile = '../../trainingdata/metamind-demo-story/params/MetatavuBotIntentsParams.txt';
   const fs = require('fs');
   const cmd = require('node-cmd');
   const Promise = require('bluebird');
   const unirest = require('unirest');
+  const config = require('nconf');
+  config.file({file: __dirname + '/config.json'});
   
   const getAsync = Promise.promisify(cmd.get, { multiArgs: true, context: cmd });
 
@@ -26,12 +27,12 @@
     
     setParameters(algorithm, iterations, cutoff) {
       return new Promise((resolve, reject) => {
-        fs.readFile(pathToParamsFile, "utf8", (e, data) => {
+        fs.readFile(config.get('path-to-opennlp-params'), "utf8", (e, data) => {
           if (e) throw e;
           
           const string = `Algorithm=${algorithm}\nIterations=${iterations}\nCutoff=${cutoff}`;
           
-          fs.writeFile(pathToParamsFile, string, () => {
+          fs.writeFile(config.get('path-to-opennlp-params'), string, () => {
             resolve();
           });
         });
@@ -41,14 +42,14 @@
     runOpenNLPDoccatTrainer(bow, ngram) {
       return new Promise((resolve, reject) => {
         const bowAndNgram = `${ngram ? "opennlp.tools.doccat.NGramFeatureGenerator":""}${bow && ngram ? ",":""}${bow ? "opennlp.tools.doccat.BagOfWordsFeatureGenerator":""}`;
-        const cmd1 = 'cd ../../trainingdata/metamind-demo-story/';
-        const cmd2 = `../../apache-opennlp-1.8.4/bin/opennlp DoccatTrainer -model ../../trainingdata/metamind-demo-story/intents/bin/fi-metatavu-bot.bin -lang en -data ../../trainingdata/metamind-demo-story/intents/MetatavuBotIntents.txt -encoding UTF-8 -featureGenerators ${bowAndNgram} -params ../../trainingdata/metamind-demo-story/params/MetatavuBotIntentsParams.txt`;
-        const cmd3 = `cd ../../git/chatbot-intent-test`;
+        const cmd1 = `cd ${config.get('path-to-opennlp-bin')}`;
+        const cmd2 = `${config.get('path-to-opennlp-bin')}opennlp DoccatTrainer -model ${config.get('path-to-trainingdata-bin')} -lang en -data ${config.get('path-to-trainingdata-txt')} -encoding UTF-8 -featureGenerators ${bowAndNgram} -params ${config.get('path-to-opennlp-params')}`;
+        const cmd3 = `cd ${config.get('path-to-back-to-project')}`;
         
         getAsync(cmd1).then(data => {
           getAsync(cmd2).then(data => {
             getAsync(cmd3).then(data => {
-              unirest.get('http://dev-metamind.com:8080/v1/system/reload')
+              unirest.get(config.get('chatbot-reload-url'))
                 .end((response) => {
                   console.log('OpenNLP Finished training. OpenNLP settings reloaded');
                   resolve();
