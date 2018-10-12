@@ -20,16 +20,9 @@ You can add/remove/change OpenNLP settings from `settings.js`. By default there 
 ## Messages
 `data.json` contains different categories for messages. And inside of categories there is actual messages. Make sure these messages are exactly same as in your OpenNLP training data.  
 
-## Add methods
-To create new methods you need to:
-
-1. Add new object to `message-edits.js`
-2. Add new switch case to `controllers/EditMessage.js`
-3. Add the method to `controllers/EditMessage.js`
-
 ## Usage
 
-This is made for [Metamind](https://github.com/Metatavu/metamind-api) but can be possibly used in other OpenNLP bots as well.
+This is made for [Metamind](https://github.com/Metatavu/metamind-api)
 
 1. Run `npm install`
 2. Make sure `config.js` is ok
